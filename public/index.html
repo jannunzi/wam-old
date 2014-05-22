@@ -44,14 +44,14 @@
 		$scope.message = response.message;
 	});
 	$http.get("/api/application")
-	.success(function(response) {
-		$scope.applications = response;
+	.success(function(applications) {
+		$scope.applications = applications;
 	});
 	
 	$scope.addNewApplication = function() {
 		$http.post("/api/application", $scope.newApplication)
-		.success(function(response){
-			$scope.applications = response;
+		.success(function(applications){
+			$scope.applications = applications;
 		});
 	}
 	
