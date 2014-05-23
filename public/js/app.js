@@ -14,6 +14,23 @@ pam.config(["$routeProvider", function($routeProvider, $http)
 		templateUrl: "templates/applicationList.html",
 		controller: "ApplicationListController"
 	})
+	.when("/application",
+	{
+		templateUrl: "templates/application.html",
+		controller: "ApplicationController"
+	})
+	.when("/uis",
+	{
+		templateUrl: "templates/userInterfaceList.html"
+	})
+	.when("/services",
+	{
+		templateUrl: "templates/serviceList.html"
+	})
+	.when("/schemas",
+	{
+		templateUrl: "templates/schemaList.html"
+	})
 	.otherwise({
 		templateUrl: "templates/applicationList.html",
 		controller: "ApplicationListController"
