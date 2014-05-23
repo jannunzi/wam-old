@@ -1,1 +1,43 @@
-﻿<h1>Hello</h1>
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name = "viewport" content = "initial-scale = 1.0, user-scalable = no">
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/applications.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <title></title>
+    <style>
+	html {
+		height: 100%;
+	}
+	input, select, textarea {
+		margin-bottom: 5px;
+	}
+	
+	.sticky-bottom {
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+	.height-100-pc {
+		height: 100%;
+	}
+    </style>
+</head>
+<body class="height-100-pc">
+    <div class="container height-100-pc" ng-app="pam">
+        <div class="row height-100-pc">
+            <div class="col-xs-12 height-100-pc" ng-view>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
