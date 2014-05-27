@@ -9,7 +9,7 @@ pam.controller('AppCtrl', ['$scope', function($scope) {
 pam.config(["$routeProvider", function($routeProvider, $http)
 {
 	$routeProvider
-	.when("/applicationList",
+	.when("/wam/user/:userId/application",
 	{
 		templateUrl: "templates/applicationList.html",
 		controller: "ApplicationListController"
