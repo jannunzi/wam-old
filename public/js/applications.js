@@ -17,6 +17,8 @@ pam.controller("ApplicationListController", function($scope, $routeParams, $http
 
 pam.controller("ApplicationController", function($scope, $routeParams, $http, $location)
 {
+	$scope.applicationId = $routeParams.applicationId;
+	
 	$scope.go = function(path) {
 		$location.path(path);
 	}

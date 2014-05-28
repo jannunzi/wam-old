@@ -35,4 +35,13 @@ app.get("/api/user/:userId/application", function(req, res) {
 	});
 });
 
+app.get("/api/user/:userId/application/:applicationId", function(req, res) {
+	console.log(req.params);
+	db.applications.findOne({
+		_id:mongojs.ObjectId(req.params.applicationId)
+	}, function(err, application) {
+		res.json(application);
+	});
+});
+
 app.listen(port, ipaddress);

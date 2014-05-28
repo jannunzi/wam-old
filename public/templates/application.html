@@ -1,14 +1,16 @@
 <h2>
 	<a href="#" class="btn btn-danger" ng-click="go('/applications')">Back</a>
-	Application
+	Application - {{application.name}}
 </h2>
 
 <table class="table">
 	<tr ng-click="go('/uis')">
 		<td>User Interfaces</td>
 	</tr>
-	<tr ng-click="go('/services')">
-		<td>Services</td>
+	<tr>
+		<td>
+		<a href="#/wam/user/user1/application/{{applicationId}}/services">Services</a>
+		</td>
 	</tr>
 	<tr ng-click="go('/schemas')">
 		<td>Schemas</td>
