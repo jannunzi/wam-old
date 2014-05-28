@@ -4,8 +4,10 @@
 </h2>
 
 <table class="table">
-	<tr ng-click="go('/application')" ng-repeat="application in applications">
-		<td>{{application.name}}</td>
+	<tr ng-repeat="application in applications">
+		<td>
+			<a href="#/wam/user/user1/application/{{application._id}}">{{application.name}}</a>
+		</td>
 	</tr>
 </table>
 

@@ -20,7 +20,7 @@ var tripSchema = {
 	}
 };
 var userSchema = {
-	schema: {
+	properties: {
 		username: String,
 		password: String,
 		dob: Date,
@@ -76,6 +76,8 @@ function createServiceEndpoints(schema) {
 		var id = req.params.id;
 		res.send("deleteUrl " + id);
 	});
+	
+//	createServiceEnpoints();
 }
 
 createServiceEndpoints(currentSchema);

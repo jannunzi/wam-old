@@ -9,12 +9,12 @@ pam.controller('AppCtrl', ['$scope', function($scope) {
 pam.config(["$routeProvider", function($routeProvider, $http)
 {
 	$routeProvider
-	.when("/applicationList",
+	.when("/wam/user/:userId/application",
 	{
 		templateUrl: "templates/applicationList.html",
 		controller: "ApplicationListController"
 	})
-	.when("/application",
+	.when("/wam/user/:userId/application/:applicationId",
 	{
 		templateUrl: "templates/application.html",
 		controller: "ApplicationController"
@@ -23,9 +23,10 @@ pam.config(["$routeProvider", function($routeProvider, $http)
 	{
 		templateUrl: "templates/userInterfaceList.html"
 	})
-	.when("/services",
+	.when("/wam/user/:userId/application/:applicationId/services",
 	{
-		templateUrl: "templates/serviceList.html"
+		templateUrl: "templates/serviceList.html",
+		controller: "ServiceListController"
 	})
 	.when("/schemas",
 	{
