@@ -1,4 +1,14 @@
-<h2>
-	<a href="#" class="btn btn-danger" ng-click="go('/application')">Back</a>
-	Services - {{application.name}}
-</h2>
+<div  class="container-fluid">
+	<h2>
+		<button class="btn btn-danger" ng-click="back()">Back</button>
+		<span class="capitalize">Services - {{application.name}}</span>		
+	</h2>
+	<table class="table">
+		<tr ng-repeat="service in serviceList">
+			<td>
+				<a href="#/pam/user/user1/applications/{{application._id}}/services/{{service}}">{{service}} service</a>
+			</td>
+		</tr>
+	</table>
+</div>
+

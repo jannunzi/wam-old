@@ -1,0 +1,17 @@
+<div  class="container-fluid col-md-4">
+	<h2>
+		<button class="btn btn-danger" ng-click="back()">Back</button>
+		{{operationName}} End Point
+	</h2>	
+	<div ng-controller="readAllUrlController">
+		<table class="table">
+			<tr ng-repeat="record in records | filter:serviceId">
+				<td>
+					<a href="#/pam/user/user1/applications/{{applicationId}}/services/{{serviceName}}/Read%20All/readOneUrl/{{record._id}}">{{record._id}}</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+

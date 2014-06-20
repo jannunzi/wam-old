@@ -1,4 +1,12 @@
 <h2>
 	<a href="#" class="btn btn-danger" ng-click="go('/application')">Back</a>
-	User Interfaces
+	UI - {{application.name}}
 </h2>
+
+<table class="table" style="width:250px">
+	<tr ng-repeat="schemaName in allSchemas">
+        <td>
+            <a href="#/wam/user/user1/application/{{application._id}}/uis/{{schemaName.name}}">{{schemaName.name}} UI</a>
+        </td>
+	</tr>
+</table>

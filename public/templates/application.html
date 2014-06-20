@@ -1,22 +1,22 @@
-<h2>
-	<a href="#" class="btn btn-danger" ng-click="go('/applications')">Back</a>
-	Application - {{application.name}}
-</h2>
-
-<table class="table">
-	<tr ng-click="go('/uis')">
-		<td>User Interfaces</td>
-	</tr>
-	<tr>
-		<td>
-		<a href="#/wam/user/user1/application/{{applicationId}}/services">Services</a>
-		</td>
-	</tr>
-	<tr ng-click="go('/schemas')">
-		<td>Schemas</td>
-	</tr>
-</table>
-
-<div class="sticky-bottom">
-	<a href="#" class="btn btn-success btn-block">Delete</a>
+<div  class="container-fluid">
+	<h2>
+		<button class="btn btn-danger" ng-click="back()">Back</button>
+		<span class="capitalize">Edit {{application.name}}</span>
+	</h2>
+	<table class="table">
+		<tr ng-click="go('/uis')">
+			<td>User Interfaces</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#/pam/user/user1/applications/{{applicationId}}/services">Services</a>
+			</td>
+		</tr>
+		<tr ng-click="go('/schemas')">
+			<td>Schemas</td>
+		</tr>
+	</table>
+	<div>
+		<a href="#" class="btn btn-success btn-block">Delete</a>
+	</div>
 </div>
