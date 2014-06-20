@@ -1,12 +1,13 @@
 {
-  "name"         : "node-todo",
-  "version"      : "0.0.0",
-  "description"  : "Simple todo application.",
-  "main"         : "server.js",
-  "author"       : "Scotch",
+  "name"         : "pam",
+  "version"      : "0.0.1",
+  "description"  : "Phone Application Module",
+  "main"         : "serviceExperiment.js",
+  "author"       : "Jose, Disha, Veena, Madhur",
   "dependencies" : {
     "express"    : "~3.4.4",
     "mongoose"   : "~3.6.2",
-    "mongojs": "~0.13.0"
+    "mongojs"    : "~0.13.0",
+    "bootstrap"  : "*"
   }
 }

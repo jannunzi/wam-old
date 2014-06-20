@@ -1,0 +1,23 @@
+<h2>
+    Display mode for {{UIName}}
+</h2>
+
+<table class="table" style="width:250px">
+	<tr ng-repeat="field in allFields">
+        <td>
+            {{field.name}} Field
+        </td>
+	</tr>
+</table>
+
+<h2>
+	<button ng-click="back()" class="btn btn-danger">Back</button>
+</h2>
+
+<h2>
+	<button ng-click="delete()" class="btn btn-danger">Delete</button>
+</h2>
+
+<h2>
+	<button ng-click="edit()" class="btn btn-danger">Edit</button>
+</h2>

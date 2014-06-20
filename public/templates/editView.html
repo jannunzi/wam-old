@@ -1,0 +1,11 @@
+<h2>
+    Edit mode for {{UIName}}
+</h2>
+
+<table class="table" style="width:250px">
+	<tr ng-repeat="field in allFields">
+        <td>
+           <a href="#/wam/user/user1/application/{{application._id}}/uis/{{UIName}}/edit/{{field.name}}">{{field.name}} Field</a>
+        </td>
+	</tr>
+</table>

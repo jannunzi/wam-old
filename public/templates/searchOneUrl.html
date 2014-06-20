@@ -1,0 +1,17 @@
+<div  class="container-fluid col-md-4">
+	<h2>
+		<button class="btn btn-danger" ng-click="back()">Back</button>
+		{{operationName}} End Point
+	</h2>	
+	<div ng-controller="searchOneUrlController">
+		<table class="table">
+			<tr ng-repeat="record in records | filter:serviceId">
+				<td>
+					<a href="#/pam/user/user1/applications/{{applicationId}}/services/{{serviceName}}/Search/readOneUrl/{{record._id}}">{{record._id}}</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+

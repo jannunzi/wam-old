@@ -1,16 +1,18 @@
-<h2>
-	<a href="#" class="btn btn-danger" ng-click="back()">Back</a>
-	Applications
-</h2>
-
-<table class="table">
-	<tr ng-repeat="application in applications">
-		<td>
-			<a href="#/wam/user/user1/application/{{application._id}}">{{application.name}}</a>
-		</td>
-	</tr>
-</table>
-
-<div class="sticky-bottom">
-	<a href="#" class="btn btn-success btn-block">Add</a>
+<div  class="container-fluid">
+	<h2>
+		<button class="btn btn-danger" ng-click="back()">Back</button>
+		Applications
+	</h2>	
+	<div ng-controller="ApplicationListController">
+		<table class="table">
+			<tr ng-repeat="application in applications">
+				<td>
+					<a href="#/pam/user/user1/applications/{{application._id}}">{{application.name}}</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<button class="btn btn-success btn-block">Add</button>
+	</div>	
 </div>
