@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/schemaJS.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    
+    <meta charset="utf-8" />
+
+
+    <title>Develop Schema</title>
+</head>
+<body ng-app="schemaApp" ng-controller="SchemaController">
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Enter name of the schema</h3>
+            <input type="text" placeholder="schema name" ng-model="schema.schemaName" />
+        </div>
+        <div class="panel-body">
+            <input type="text" placeholder="Enter name of Field" ng-model="schema.fieldName" />
+            <select ng-model="schema.fieldType">
+                <option>Text Field</option>
+                <option>Text Area</option>
+                <option>Date Pick Up</option>
+                <option>Color Chooser</option>
+                <option>Password</option>
+            </select>
+        </div>
+
+        <button type="button" class="btn btn-primary" ng-click="addField()">Add</button>
+    </div>
+    <div class="row">
+        <!-- The new Schema on the fly created-->
+        <div class="col-xs-6">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th> Field Name</th>
+                        <th> Field Type</th>
+                        <th> Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="field in fields">
+                        <td>{{field.fieldName}}</td>
+                        <td>{{field.fieldType}}</td>
+                        <td><button type="button" class="btn btn-danger" ng-click="removeField(field)">Remove</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--The schemas mapped-->
+        <div class="col-xs-6 col-sm-3">
+            <table class="table table-hover table-responsive">
+                <thead>
+                    <tr>
+                        <th> Mapped Schemas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="schema in mappedSchema">
+                        <td>{{schema._schema['meta-data']}}</td>
+                        <td>
+                            <button class="btn btn-danger" data-toggle="button" ng-click="unmapToSchema(schema)">
+                                Un-Map
+                                <span class="glyphicon glyphicon-remove-sign"></span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- List of all available Schemas -->
+        <div class="col-xs-6 col-sm-3">
+            <table class="table table-hover table-responsive">
+                <thead>
+                    <tr>
+                        <th> Schemas that can be mapped</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="relevantSchema in allSchemas">
+                        <td><a href="" ng-click="openSchema(relevantSchema)"> {{relevantSchema._schema['meta-data']}} </a></td>
+
+                        <td>
+                            <button class="btn btn-info" data-toggle="button" ng-click="mapToSchema(relevantSchema)">
+                                Map
+                                <span class="glyphicon glyphicon-ok-sign"></span>
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger" data-toggle="button" ng-click="deleteSchema(relevantSchema._id)">
+                                Drop Table
+                                <span class="glyphicon glyphicon-remove-sign"></span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>        
+    </div>
+    
+    <div class="alert alert-danger" style= 'display:none' id="myAlert" onclick="closeErrorMessage()">
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <strong>Error!</strong>
+    </div>
+    <div>
+        <button type="button" class="btn btn-primary" ng-click="submitSchema()">Submit</button>
+    </div>    
+</body>
+</html>
