@@ -1,0 +1,17 @@
+<div class="container-fluid col-md-4">
+    <h2>
+        <button class="btn btn-danger" ng-click="back()">Back</button>
+        <span class="capitalize">Choose Root</span>
+    </h2>
+
+    <select class="form-control" ng-model="rootEntity">
+        <option ng-repeat="entity in entities" value="{{entity.schemaName}}">{{entity.schemaName}}</option>
+    </select>
+
+    <h2>
+        <button ng-click="save(rootEntity)" class="btn btn-danger">Save settings</button>
+    </h2>
+
+     <label ng-model="result" id="result">{{result}}</label>
+
+</div>

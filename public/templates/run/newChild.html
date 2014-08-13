@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <h2>
+        <button class="btn btn-danger" ng-click="back()">Back</button>
+        <!--<span class="capitalize">{{type}} - {{application.name}}</span>-->
+    </h2>
+    hello
+    <div>
+        <pre>{{labels}}</pre>
+        <form>
+            <div ng-repeat="field in labels" class="form-group">
+                <label>{{field.name}}</label>
+                <input ng-model="formData[field.name]" class="form-control" />
+            </div>
+            <br />
+            <div class="form-group">
+                <pre>form = {{formData | json}}</pre>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success btn-block" ng-click="submitForm(formData)">Create</button>
+                <label ng-model="result" id="result">{{result}}</label>
+            </div>
+        </form>
+    </div>
+</div>

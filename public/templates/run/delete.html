@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <h2>
+        <button class="btn btn-danger" ng-click="back()">Back</button>
+        <span class="capitalize">{{application.name}}</span>
+    </h2>
+    <br />
+    <table class="table table-striped">
+        <tr>
+            <th ng-repeat="(key, val) in labels">{{val.name}}
+            </th>
+            <th>{{childEntity}}</th>
+            <th>Delete</th>
+        </tr>
+        <tr ng-repeat="objects in  records">
+            <td ng-repeat="(key, val) in labelsOriginal">{{objects[val.name]}}
+            </td>
+            <td ng-if="childEntity">
+                <a href="#/view/user/{{userName}}/applications/{{applicationId}}/running/view/{{collection}}~{{objects['_id']}}/{{childEntity}}/view">View {{childEntity}}</a>
+            </td>
+            <td>
+                <a href="#/delete/user/{{userName}}/applications/{{applicationId}}/running/delete/{{collection}}/{{objects['_id']}}/{{childEntity}}">Delete</a>
+                <button ng-click="go(collection,objects['_id'],applicationId,userName)"></button>
+            </td>
+        </tr>
+        <tr>
+        </tr>
+    </table>
+    <a ng-if="listViewInsertable" href="#/pam/user/{{userName}}/applications/{{applicationId}}/running/new/{{collection}}/{{childEntity}}">New</a>
+</div>

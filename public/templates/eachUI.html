@@ -1,0 +1,34 @@
+hello
+<div class="container-fluid" ng-controller="eachUIController">
+    <h2>
+        <button class="btn btn-danger" ng-click="back()">Back</button>
+        <span class="capitalize">Edit mode for {{schemaName}}</span>
+    </h2>
+    <form>
+        Label for the field
+    <input type="text" name="name" ng-model="labelName"><br>
+        <br />
+        <div class="form-group">
+            <pre>form = {{formData | json}}</pre>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success btn-block" ng-click="save()">Update</button>
+            <label ng-model="result" id="Label1">{{result}}</label>
+        </div>
+    </form>
+</div>
+
+<form id="pamForm">
+    <div ng-repeat="field in fieldList" class="form-group">
+        <label>{{field.name}}</label>
+        <input ng-model="formData[field.name]" class="form-control"></input>
+    </div>
+    <br />
+    <div class="form-group">
+        <pre>form = {{formData | json}}</pre>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-success btn-block" ng-click="submitForm()">Update</button>
+        <label ng-model="result" id="result">{{result}}</label>
+    </div>
+</form>

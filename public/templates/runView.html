@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <h2>
+        <button class="btn btn-danger" ng-click="back()">Back</button>
+        <span class="capitalize">{{type}} - {{application.name}}</span>
+    </h2>
+
+    <table class="table table-striped">
+        <tr>
+            <th ng-repeat="(key, val) in labels">{{val.name}}
+            </th>
+            <th>{{childName}}</th>
+            <th ng-if="listViewDeletable">Delete</th>
+        </tr>
+        <tr ng-repeat="step in level1">
+            <td ng-repeat="(key, val) in getDetailsFromKey(step)">{{val}}
+            </td>
+            <td>
+                <a href="#/pam/user/user1/applications/{{applicationId}}/run/{{currentName}}/{{step._id}}/{{childName}}">View {{childName}}</a>
+            </td>
+            <td ng-if="listViewDeletable">
+                <a href="#/pam/user/user1/applications/{{applicationId}}/run/delete/{{currentName}}/{{step._id}}">Delete</a>
+            </td>
+        </tr>
+    </table>
+    <a ng-if="listViewInsertable" href="#/pam/user/user1/applications/{{applicationId}}/run/new/{{parentCollection}}/{{currentName}}/{{childEntity}}">New</a>
+</div>

@@ -1,0 +1,15 @@
+<div class="container-fluid col-md-4">
+    <h2>
+        <button class="btn btn-danger" ng-click="back()">Back</button>
+        <span class="capitalize">User Interfaces</span>
+    </h2>
+    <div ng-controller="UIController">
+        <table class="table">
+            <tr ng-repeat="record in records">
+                <td>
+                    <a href="#/pam/user/user1/applications/{{applicationId}}/userInterfaces/{{record.schemaName}}">{{record.schemaName}}</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

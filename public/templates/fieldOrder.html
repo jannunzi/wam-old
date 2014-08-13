@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <h2>
+        <button class="btn btn-danger" ng-click="back()">Back</button>
+        <span class="capitalize">Field Ordering for {{schemaName}}</span>
+    </h2>
+
+    <table class="table" style="width: 300px">
+        <tr ng-repeat="field in orderOfFields">
+            <td>{{fieldListKeys[field]}}
+            </td>
+            <td>
+                <a href="#/pam/user/user1/application/{{applicationId}}/userInterfaces/{{schemaName}}/fieldOrder/up/{{$index}}">Move up</a>
+            </td>
+            <td>
+                <a href="#/pam/user/user1/application/{{applicationId}}/userInterfaces/{{schemaName}}/fieldOrder/down/{{$index}}">Move down</a>
+            </td>
+        </tr>
+    </table>
+    <h2>
+        <button ng-click="save()" class="btn btn-danger">Save Settings</button>
+    </h2>
+
+    <label ng-model="result" id="result">{{result}}</label>
+</div>

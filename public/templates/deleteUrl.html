@@ -1,0 +1,25 @@
+<div  class="container-fluid col-md-4">
+	<h2>
+		<button class="btn btn-danger" ng-click="back()">Back</button>
+		{{operationName}} End Point
+	</h2>	
+	<div ng-controller="deleteUrlController">
+		<table class="table">
+			<tr>
+				<td><input placeholder="ID" ng-model="serviceId"></input></td>
+			</tr>
+			<tr ng-repeat="record in records | filter:serviceId">
+				<td>
+					<a  style="cursor: pointer;" ng-click="deleteUrl(record._id)">{{record._id}}</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button class="btn btn-success btn-block" ng-click="deleteUrl(serviceId)">Delete</button>
+					<label ng-model="result" id="result">{{result}}</label>
+				</td>
+			</tr>
+		</table>
+	</div>	
+</div>
+

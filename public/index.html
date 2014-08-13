@@ -3,34 +3,135 @@
 <head>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name = "viewport" content = "initial-scale = 1.0, user-scalable = no">
-    <script src="js/angular.min.js"></script>
-    <script src="js/angular-route.min.js"></script>
+    <meta name="viewport" content="initial-scale = 1.0, user-scalable = no">
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.11/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/applications.js"></script>
+    <script src="js/readAllUrl.js"></script>
+    <script src="js/readOneUrl.js"></script>
+    <script src="js/readByIdUrl.js"></script>
+    <script src="js/postUrl.js"></script>
+    <script src="js/putUrl.js"></script>
+    <script src="js/putOneUrl.js"></script>
+    <script src="js/deleteUrl.js"></script>
+    <script src="js/searchUrl.js"></script>
+    <script src="js/searchOneUrl.js"></script>
+    <script src="js/schemaUserInterfaceView.js"></script>
+    <script src="js/listView.js"></script>
     <script src="js/services.js"></script>
+    <script src="js/editView.js"></script>
+    <script src="js/editFields.js"></script>
+    <script src="js/readAllSchema.js"></script>
+    <script src="js/displayFieldOrder.js"></script>
+    <script src="js/displayFieldOrder.js"></script>
+    <script src="js/new.js"></script>
+    <script src="js/editRecordController.js"></script>
+    <script src="js/childController.js"></script>
+    <script src="js/delete.js"></script>
+    <script src="js/chooseController.js"></script>
+    <script src="js/runCopy.js"></script>
+    <script src="js/runView.js"></script>
+    <script src="js/runNew.js"></script>
+    <script>
+        var currentSchema = {
+            schema: {
+                username: String,
+                password: String,
+                dob: Date,
+                _schemaId: {
+                    schema: {
+                        name: String,
+                        latitude: Number,
+                        longitude: Number,
+                        _schemaId: {
+                            schema: {
+                                name: String,
+                                length: Number,
+                                weight: Number,
+                                _schemaId: null
+                            },
+                            meta: {
+                                name: "fish",
+                                listView: {
+                                    deletable: true,
+                                    reorderable: true,
+                                    insertable: true
+                                },
+                                orderOfFields: [0, 1, 2]
+                            }
+                        }
+                    },
+                    meta: {
+                        name: "trip",
+                        listView: {
+                            deletable: true,
+                            reorderable: true,
+                            insertable: true
+                        },
+                        orderOfFields: [0, 1, 2]
+                    }
+                }
+            },
+            meta: {
+                name: "user",
+                listView: {
+                    deletable: true,
+                    reorderable: true,
+                    insertable: true
+                },
+                orderOfFields: [0, 1, 2],
+                editView: {
+                    fields: {
+                        _id: { label: "Id", readOnly: false },
+                    },
+                    deletable: true,
+                    insertable: true,
+                    updatabale: true
+                }
+            }
+        };
+    </script>
     <link href="css/bootstrap.css" rel="stylesheet" />
-    <title></title>
+    <link href="css/pam.css" rel="stylesheet" />
+    <title>PAM</title>
     <style>
-	html {
-		height: 100%;
-	}
-	input, select, textarea {
-		margin-bottom: 5px;
-	}
-	
-	.sticky-bottom {
-		position: absolute;
-		bottom: 0px;
-		left: 0px;
-		right: 0px;
-		margin-left: 10px;
-		margin-right: 10px;
-		margin-bottom: 10px;
-	}
-	.height-100-pc {
-		height: 100%;
-	}
+        html {
+            height: 100%;
+        }
+
+        input, select, textarea {
+            margin-bottom: 5px;
+        }
+
+        .sticky-bottom {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .height-100-pc {
+            height: 100%;
+        }
+
+
+        .item, .placeholder {
+            padding: 2px;
+            width: 50px;
+            height: 20px;
+            border: 1px solid #333;
+            background: #EEE;
+        }
+
+        .placeholder {
+            background: #AEF;
+        }
     </style>
 </head>
 <body class="height-100-pc">

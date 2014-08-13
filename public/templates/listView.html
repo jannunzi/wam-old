@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <h2>
+        <button class="btn btn-danger" ng-click="back()">Back</button>
+        <span class="capitalize">List view configuration for {{schemaName}}</span>
+    </h2>
+    <p>
+        <a href="#/pam/user/user1/application/{{applicationId}}/userInterfaces/{{schemaName}}/fieldOrder">Choose Field Order</a>
+    </p>
+    <p>Choose configuration from below</p>
+    <div class="form-group">
+        <pre>list view config = {{listViewFields | json}}</pre>
+    </div>
+
+    <div ng-repeat="(key, value) in listViewFields">
+        <label>{{key}}</label>
+        <input type="checkbox" ng-model="listViewFields[key]" ng-checked="listViewFields[key]" />
+    </div>
+
+    <h2>
+        <button ng-click="save()" class="btn btn-danger">Save Settings</button>
+    </h2>
+
+    <label ng-model="result" id="result">{{result}}</label>
+</div>

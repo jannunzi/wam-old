@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <h2>
+        <button class="btn btn-danger" ng-click="back()">Back</button>
+        <span class="capitalize">Edit mode for {{fieldName}}</span>
+    </h2>
+    <div ng-controller="editFieldController">
+        <form>
+            <label>{{requiredKeys[0]}}</label>
+            <input type="text" ng-model="requiredAnswer[requiredKeys[0]]" />
+            <br />
+            <label>{{requiredKeys[1]}}</label>
+            <input type="checkbox" ng-model="requiredAnswer[requiredKeys[1]]" />
+            <div class="form-group">
+                <pre>form = {{requiredAnswer | json}}</pre>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success btn-block" ng-click="save()">Save Settings</button>
+                <label ng-model="result" id="Label1">{{result}}</label>
+            </div>
+        </form>
+    </div>
+</div>

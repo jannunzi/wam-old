@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <h2>
+        <button class="btn btn-danger" ng-click="back()">Back</button>
+        <span class="capitalize">Edit view configuration for {{schemaName}}</span>
+    </h2>
+
+    <h5>Edit configuration for below fields by clicking on them: </h5>
+    <div ng-repeat="(key, value) in fieldList">
+        <a href="#/pam/user/user1/application/{{applicationId}}/userInterfaces/{{schemaName}}/editView/{{key}}">{{key}}</a>
+    </div>
+
+    <h5>Update configuration from below:</h5>
+
+    <div ng-repeat="(key, value) in editViewFields">
+        <label>{{key}}</label>
+        <input type="checkbox" ng-model="editViewFields[key]" ng-checked="editViewFields[key]" />
+    </div>
+
+    <div class="form-group">
+        <pre>edit view config = {{editViewFields | json}}</pre>
+    </div>
+
+    <h2>
+        <button ng-click="save()" class="btn btn-danger">Save settings</button>
+    </h2>
+
+    <label ng-model="result" id="result">{{result}}</label>
+</div>

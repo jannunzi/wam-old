@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <h2>
+        <button class="btn btn-danger" ng-click="back()">Back</button>
+        <span class="capitalize">{{type}} - {{application.name}}</span>
+    </h2>
+    <table class="table">
+        <tr ng-repeat="schema in schemaList">
+            <td>
+                <a href="#/pam/user/user1/applications/{{application._id}}/{{type}}/{{schema}}">{{schema}} {{type}}</a>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Using flat schema -->
+    <table class="table">
+        <tr ng-repeat="schema in allSchemaNamesFlat">
+            <td>
+                <a href="#/pam/user/user1/applications/{{application._id}}/{{type}}/{{schema}}">{{schema}} {{type}}</a>
+            </td>
+        </tr>
+    </table>
+</div>
