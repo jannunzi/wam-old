@@ -1,0 +1,202 @@
+[
+{	"appId": "53ad3cbfdea87c3bd8666120",
+	"User" : [
+		{
+			"_id":"u1",
+			"userName": "user1",
+			"password": "p1",
+			"DOB":"03/13/1989",
+			"Trip" : [
+				{	
+					"_id": "T1",
+					"tripName" : "NY",
+					"tripLatitude" : "12345",
+                    "tripLongitude" : "67890",
+					"Fish" : [
+									{
+										"_id": "F1",
+										"fishName" : "F1U1T1",
+										"fishLength" : "203 cms",
+										"dateCaught" : "06/15/2014"
+									},
+									{
+										"_id": "F2",
+										"fishName" : "F2U1T1",
+										"fishLength" : "204 cms",
+										"dateCaught" : "06/16/2014"
+									}
+								]
+				},
+				{
+					"_id": "T2",
+					"tripName" : "LA",
+					"tripLatitude" : "12345",
+                    "tripLongitude" : "67890",
+					"Fish" : [
+									{
+										"_id": "F1",
+										"fishName" : "F1U1T2",
+										"fishLength" : "203 cms",
+										"dateCaught" : "06/15/2014"
+									},
+									{
+										"_id": "F2",
+										"fishName" : "F2U1T2",
+										"fishLength" : "203 cms",
+										"dateCaught" : "06/15/2014"
+									}
+								]
+				}
+			]
+		},
+		{
+			"_id":"u2",
+			"userName": "user2",
+			"password": "p2",
+			"DOB":"03/13/1992",
+			"Trip" : [
+				{
+					"_id": "T1",
+					"tripName" : "NY",
+					"tripLatitude" : "12345",
+                    "tripLongitude" : "67890",
+					"Fish" : [
+									{
+										"_id": "F1",
+										"fishName" : "F1U2T1",
+										"fishLength" : "203 cms",
+										"dateCaught" : "06/15/2014"
+									},
+									{
+										"_id": "F2",
+										"fishName" : "F2U2T1",
+										"fishLength" : "203 cms",
+										"dateCaught" : "06/15/2014"
+									}
+								]
+				},
+				{
+					"_id": "T2",
+					"tripName" : "FL",
+					"tripLatitude" : "12345",
+                    "tripLongitude" : "67890",
+					"Fish" : [
+									{
+										"_id": "F1",
+										"fishName" : "F1U2T2",
+										"fishLength" : "203 cms",
+										"dateCaught" : "06/15/2014"
+									},
+									{
+										"_id": "F2",
+										"fishName" : "F2U2T2",
+										"fishLength" : "203 cms",
+										"dateCaught" : "06/15/2014"
+									}
+								]
+				}
+			]
+		}
+	]
+},
+{	"appId": "53ad3cbfdea87c3bd8666130",
+	"User" : [
+		{	
+			"_id":"u1",
+			"userName": "user1",
+			"password": "p1",
+			"DOB":"03/13/1989",
+			"Trip" : [
+				{	
+					"_id": "T1",
+					"tripName" : "NY",
+					"tripLatitude" : "12345",
+                    "tripLongitude" : "67890",
+					"Fish" : [
+									{
+										"_id": "F1",
+										"fishName" : "F1U1T1",
+										"fishLength" : "203 cms",
+										"dateCaught" : "06/15/2014"
+									},
+									{
+										"_id": "F2",
+										"fishName" : "F2U1T1",
+										"fishLength" : "204 cms",
+										"dateCaught" : "06/16/2014"
+									}
+								]
+				},
+				{
+					"_id": "T2",
+					"tripName" : "LA",
+					"tripLatitude" : "12345",
+                    "tripLongitude" : "67890",
+					"Fish" : [
+									{
+										"_id": "F1",
+										"fishName" : "F1U1T2",
+										"fishLength" : "203 cms",
+										"dateCaught" : "06/15/2014"
+									},
+									{
+										"_id": "F2",
+										"fishName" : "F2U1T2",
+										"fishLength" : "203 cms",
+										"dateCaught" : "06/15/2014"
+									}
+								]
+				}
+			]
+		},
+		{
+			"_id":"u2",
+			"userName": "user2",
+			"password": "p2",
+			"DOB":"03/13/1992",
+			"Trip" : [
+				{
+					"_id": "T1",
+					"tripName" : "NY",
+					"tripLatitude" : "12345",
+                    "tripLongitude" : "67890",
+					"Fish" : [
+									{
+										"_id": "F1",
+										"fishName" : "F1U2T1",
+										"fishLength" : "203 cms",
+										"dateCaught" : "06/15/2014"
+									},
+									{
+										"_id": "F2",
+										"fishName" : "F2U2T1",
+										"fishLength" : "203 cms",
+										"dateCaught" : "06/15/2014"
+									}
+								]
+				},
+				{
+					"_id": "T2",
+					"tripName" : "FL",
+					"tripLatitude" : "12345",
+                    "tripLongitude" : "67890",
+					"Fish" : [
+									{
+										"_id": "F1",
+										"fishName" : "F1U2T2",
+										"fishLength" : "203 cms",
+										"dateCaught" : "06/15/2014"
+									},
+									{
+										"_id": "F2",
+										"fishName" : "F2U2T2",
+										"fishLength" : "203 cms",
+										"dateCaught" : "06/15/2014"
+									}
+								]
+				}
+			]
+		}
+	]
+}
+]

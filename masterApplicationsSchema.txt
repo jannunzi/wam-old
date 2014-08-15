@@ -1,0 +1,196 @@
+{
+        "_schema" : {
+                "_schema Body" : {
+                        "fishName" : "Text",
+                        "fishLength" : "Text",
+                        "dateCaught" : "Date"
+                },
+                "meta-data" : {
+                        "schema-name" : "Fish",
+                        "list-view" : {
+                                "Deletable" : true,
+                                "Reorderable" : true,
+                                "Insertable" : true,
+								"Updatabale":true
+								
+                        },
+                        "edit-view" : {
+                                "fields" : [
+                                        {
+                                                "name" : "_id",
+                                                "properties" : {
+                                                        "label" : "_id",
+                                                        "readOnly" : true
+                                                }
+                                        },
+                                        {
+                                                "name" : "fishName",
+                                                "properties" : {
+                                                        "label" : "Name",
+                                                        "readOnly" : false
+                                                }
+                                        },
+                                        {
+                                                "name" : "fishLength",
+                                                "properties" : {
+                                                        "label" : "Fish Length",
+                                                        "readOnly" : false
+                                                }
+                                        },
+                                        {
+                                                "name" : "dateCaught",
+                                                "properties" : {
+                                                        "label" : "Date Caught",
+                                                        "readOnly" : false
+                                                }
+                                        }
+                                ],
+                                "config" : {
+                                        "Deletable" : true,
+                                        "Updatabale" : true,
+                                        "Insertable" : true
+                                }
+                        },
+                        "order-of-fields" : [
+                                0,
+                                1,
+                                2
+                        ]
+                }
+        },
+        "emailId" : "user1@gmail.com",
+        "applicationObjectId" : "53ad3cbfdea87c3bd8666120",
+        "schemaName" : "Fish"
+}
+{
+        "_schema" : {
+                "_schema Body" : {
+                        "tripName" : "Text",
+                        "tripLatitude" : "Text",
+                        "tripLongitude" : "Text"
+                },
+                "meta-data" : {
+                        "schema-name" : "Trip",
+                        "list-view" : {
+                                "Deletable" : true,
+                                "Reorderable" : true,
+                                "Insertable" : true,
+								"Updatabale":true
+                        },
+                        "edit-view" : {
+                                "fields" : [
+                                        {
+                                                "name" : "_id",
+                                                "properties" : {
+                                                        "label" : "_id",
+                                                        "readOnly" : true
+                                                }
+                                        },
+                                        {
+                                                "name" : "tripName",
+                                                "properties" : {
+                                                        "label" : "Trip Name",
+                                                        "readOnly" : false
+                                                }
+                                        },
+                                        {
+                                                "name" : "tripLatitude",
+                                                "properties" : {
+                                                        "label" : "Trip Latitude",
+                                                        "readOnly" : false
+                                                }
+                                        },
+                                        {
+                                                "name" : "tripLongitude",
+                                                "properties" : {
+                                                        "label" : "Longitude",
+                                                        "readOnly" : false
+                                                }
+                                        }
+                                ],
+                                "config" : {
+                                        "Deletable" : true,
+                                        "Updatabale" : true,
+                                        "Insertable" : true
+                                }
+                        },
+                        "order-of-fields" : [
+                                0,
+                                1,
+                                2
+                        ]
+                },
+                "one-to-many" : [
+                        "53e16e3aab38db56dd52e5ce"
+                ]
+        },
+        "emailId" : "user1@gmail.com",
+        "applicationObjectId" : "53ad3cbfdea87c3bd8666120",
+        "schemaName" : "Trip"
+}
+{
+        "_schema" : {
+                "_schema Body" : {
+                        "userName" : "Text",
+                        "password" : "Text",
+                        "DOB" : "Date"
+                },
+                "meta-data" : {
+                        "schema-name" : "User",
+                        "list-view" : {
+                                "Deletable" : true,
+                                "Reorderable" : true,
+                                "Insertable" : true,
+								"Updatabale":true
+                        },
+                        "edit-view" : {
+                                "fields" : [
+                                        {
+                                                "name" : "_id",
+                                                "properties" : {
+                                                        "label" : "_id",
+                                                        "readOnly" : true
+                                                }
+                                        },
+                                        {
+                                                "name" : "userName",
+                                                "properties" : {
+                                                        "label" : "User Name",
+                                                        "readOnly" : false
+                                                }
+                                        },
+                                        {
+                                                "name" : "password",
+                                                "properties" : {
+                                                        "label" : "Password",
+                                                        "readOnly" : false
+                                                }
+                                        },
+                                        {
+                                                "name" : "DOB",
+                                                "properties" : {
+                                                        "label" : "Date of Birth",
+                                                        "readOnly" : true
+                                                }
+                                        }
+                                ],
+                                "config" : {
+                                        "Deletable" : true,
+                                        "Updatabale" : true,
+                                        "Insertable" : true
+                                }
+                        },
+                        "order-of-fields" : [
+                                0,
+                                1,
+                                2
+                        ]
+                },
+                "one-to-many" : [
+                        "53e16e70ab38db56dd52e5cf"
+                ]
+        },
+        "emailId" : "user1@gmail.com",
+        "applicationObjectId" : "53ad3cbfdea87c3bd8666120",
+        "schemaName" : "User"
+}
